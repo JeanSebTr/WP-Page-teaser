@@ -120,9 +120,9 @@ function newDateCode()
 	global $oDateCible;
 	return 'new Date(Date.UTC('.
 				$oDateCible->format('Y').', '.
-				intval($oDateCible->format('n'))-1.', '.
+				(intval($oDateCible->format('n'))-1).', '.
 				$oDateCible->format('j').', '.
 				$oDateCible->format('G').', '.
 				intval($oDateCible->format('i')).', '.
-				intval($oDateCible->format('s'))+3.'))';
+				(intval($oDateCible->format('s'))+3).'))';
 }
